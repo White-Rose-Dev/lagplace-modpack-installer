@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import tw from 'twin.macro';
-import { css } from 'styled-components/macro';
+import { field, grid, strip } from '@/components/lagplace/ResourceCard';
 import ServerContentBlock from '@/components/elements/ServerContentBlock';
 import Spinner from '@/components/elements/Spinner';
 import { Button } from '@/components/elements/button';
@@ -19,23 +19,6 @@ import {
     ProviderInfo,
     searchModpacks,
 } from './modpacks';
-
-const strip = css`
-    border: 1px solid rgba(0, 202, 150, 0.14);
-    border-left: 4px solid rgba(0, 202, 150, 0.5);
-    background: rgba(3, 28, 34, 0.45);
-    border-radius: 0.65rem;
-`;
-
-// Duas colunas em ecrãs largos (mais modpacks de uma vez); uma só em ecrãs estreitos.
-const grid = css`
-    display: grid;
-    gap: 0.6rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    @media (max-width: 1200px) {
-        grid-template-columns: minmax(0, 1fr);
-    }
-`;
 
 const DEFAULT_PROVIDERS: ProviderInfo[] = [
     { id: 'modrinth', name: 'Modrinth', enabled: true },
@@ -160,7 +143,7 @@ const Content = ({ uuid }: { uuid: string }) => {
                         setProvider(e.target.value);
                     }}
                     aria-label={'Provider'}
-                    css={tw`rounded-lg px-3 py-2 bg-black bg-opacity-30 border border-neutral-600 text-neutral-100`}
+                    css={field}
                 >
                     {providers.map((p) => (
                         <option key={p.id} value={p.id} disabled={!p.enabled}>
@@ -173,7 +156,7 @@ const Content = ({ uuid }: { uuid: string }) => {
                     onChange={(e) => setTyped(e.target.value)}
                     placeholder={'Search modpacks…'}
                     maxLength={100}
-                    css={tw`flex-1 rounded-lg px-3 py-2 bg-black bg-opacity-30 border border-neutral-600 text-neutral-100`}
+                    css={[field, tw`flex-1`]}
                 />
                 <Button type={'submit'}>Search</Button>
             </form>

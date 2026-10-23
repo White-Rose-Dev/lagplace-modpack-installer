@@ -35,6 +35,7 @@ official API.
 - `app/Jobs/Lagplace/ModpackInstallJob.php` the queued install
 - `app/Http/Controllers/Api/Client/Servers/ModpacksController.php` the API the panel UI calls
 - `.blueprint/dev/` the [Blueprint](https://blueprint.zip) extension (React UI)
+- `resources/scripts/components/lagplace/ResourceCard.tsx` the shared card, grid and field styles (also used by our Mods and Plugins pages)
 - `scripts/lagplace/test-*.php` plain PHP tests, run with `php scripts/lagplace/test-ftb.php`
   (they need a Pterodactyl checkout, set `PANEL_DIR` to its path)
 
