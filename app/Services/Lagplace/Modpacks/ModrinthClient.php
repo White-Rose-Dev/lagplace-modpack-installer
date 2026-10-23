@@ -42,6 +42,7 @@ final class ModrinthClient
                 $hits[] = [
                     'id' => (string) ($h['project_id'] ?? ''),
                     'slug' => (string) ($h['slug'] ?? ''),
+                    'url' => isset($h['slug']) && is_string($h['slug']) && preg_match('/^[A-Za-z0-9_-]{1,64}$/', $h['slug']) ? 'https://modrinth.com/modpack/' . $h['slug'] : null,
                     'title' => (string) ($h['title'] ?? ''),
                     'description' => (string) ($h['description'] ?? ''),
                     'icon' => isset($h['icon_url']) && is_string($h['icon_url']) && str_starts_with($h['icon_url'], 'https://') ? $h['icon_url'] : null,

@@ -156,6 +156,7 @@ final class FtbClient
         return [
             'id' => (string) $d['id'],
             'slug' => trim((string) preg_replace('/[^a-z0-9]+/', '-', strtolower((string) ($d['name'] ?? ''))), '-'),
+            'url' => ctype_digit((string) $d['id']) ? 'https://www.feed-the-beast.com/modpacks/' . $d['id'] : null,
             'title' => (string) ($d['name'] ?? ''),
             'description' => mb_substr((string) ($d['synopsis'] ?? ''), 0, 300),
             'icon' => $icon,

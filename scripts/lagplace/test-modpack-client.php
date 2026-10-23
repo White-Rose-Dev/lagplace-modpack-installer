@@ -82,6 +82,16 @@ foreach (['http://cdn.modrinth.com/i.png', 'javascript:alert(1)', 'data:image/sv
     $t('search: ícone ' . json_encode($url) . ' é descartado', $cx->search('x' . $i, 1)['hits'][0]['icon'] === null);
 }
 
+// o link oficial é montado a partir do slug e só com slugs seguros
+$t('search: url oficial do pack', $r['hits'][0]['url'] === 'https://modrinth.com/modpack/cobbleverse');
+$bad = $searchBody;
+foreach (['a/b', 'x?y=1', '../etc', 'javascript:alert(1)', "a b", '', null] as $i => $slug) {
+    $bad['hits'][0]['project_id'] = 'S' . $i;
+    $bad['hits'][0]['slug'] = $slug;
+    [$cx] = $make(['api.modrinth.com/v2/search*' => Factory::response($bad)]);
+    $t('search: slug ' . json_encode($slug) . ' não gera url', $cx->search('s' . $i, 1)['hits'][0]['url'] === null);
+}
+
 // --- versions
 $verBody = [
     ['id' => 'sgQrCEiw', 'name' => 'Cobbleverse 1.7.42', 'version_number' => '1.7.42', 'game_versions' => ['1.21.1'], 'loaders' => ['fabric'], 'date_published' => '2026-01-01T00:00:00Z', 'files' => []],

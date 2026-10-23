@@ -1,6 +1,8 @@
 import React from 'react';
 import tw from 'twin.macro';
 import { css } from 'styled-components/macro';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '@/components/elements/button';
 import { ModpackHit } from './modpacks';
 
@@ -46,7 +48,13 @@ export default ({ pack, onInstall, disabled }: { pack: ModpackHit; onInstall: ()
         <div style={{ minWidth: 0, flex: 1 }}>
             <div css={tw`flex items-center flex-wrap gap-2`}>
                 <p css={tw`text-base font-semibold text-white`} style={{ wordBreak: 'break-word' }}>
-                    {pack.title}
+                    {pack.url ? (
+                        <a href={pack.url} target={'_blank'} rel={'noreferrer'} css={tw`hover:text-gray-400`}>
+                            {pack.title} <FontAwesomeIcon icon={faExternalLinkAlt} css={tw`ml-1 h-3 w-3`} />
+                        </a>
+                    ) : (
+                        pack.title
+                    )}
                 </p>
                 {pack.loaders.map((loader) => (
                     <span

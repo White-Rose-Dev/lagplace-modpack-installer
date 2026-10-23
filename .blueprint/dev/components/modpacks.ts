@@ -3,6 +3,7 @@ import http from '@/api/http';
 export interface ModpackHit {
     id: string;
     slug: string;
+    url?: string | null;
     title: string;
     description: string;
     icon: string | null;

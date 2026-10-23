@@ -115,6 +115,7 @@ $r = $c->search(null, 1, 20);
 $t('search: total = nº de ids; packs privados ficam de fora', $r['total'] === 3 && count($r['hits']) === 2);
 $h = $r['hits'][0];
 $t('search: campos do hit', $h['id'] === '100' && $h['title'] === 'Pack 100' && $h['slug'] === 'pack-100' && $h['downloads'] === (int) $detail['installs'] && is_string($h['description']));
+$t('search: url oficial do pack', $h['url'] === 'https://www.feed-the-beast.com/modpacks/100');
 $t('search: ícone https vindo de "art" (square)', is_string($h['icon']) && str_starts_with($h['icon'], 'https://apps.modpacks.ch/'));
 $t('search: loader e versão de Minecraft da versão mais recente', $h['loaders'] === ['forge'] && $h['versions'] === ['1.18.2']);
 $u = $urls($http);
