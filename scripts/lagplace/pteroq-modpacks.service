@@ -1,0 +1,15 @@
+[Unit]
+Description=LagPlace modpack install worker (fila Redis "modpacks")
+After=network.target
+
+[Service]
+# Um modpack demora minutos; no pteroq normal bloquearia emails e a criação de servidores.
+# Reiniciar este serviço depois de alterar o código do job (php artisan queue:restart também serve).
+User=www-data
+Group=www-data
+Restart=always
+RestartSec=5
+ExecStart=/usr/bin/php /var/www/pterodactyl/artisan queue:work --queue=modpacks --sleep=3 --tries=1 --timeout=7200 --max-time=3600
+
+[Install]
+WantedBy=multi-user.target

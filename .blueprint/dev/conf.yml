@@ -1,0 +1,37 @@
+info:
+  name: "LagPlace Modpacks"
+  identifier: "lagplacemodpacks"
+  description: "Install Modrinth modpacks as complete Minecraft servers."
+  flags: ""
+  version: "0.1.0"
+  target: "beta-2026-08"
+  author: "LagPlace"
+  icon: "icon.jpg"
+  website: "https://lagplace.xyz"
+
+admin:
+  view: "admin.blade.php"
+  controller: ""
+  css: ""
+  wrapper: ""
+
+dashboard:
+  css: ""
+  wrapper: ""
+  components: "components"
+
+data:
+  directory: ""
+  public: ""
+  console: ""
+
+requests:
+  views: ""
+  app: ""
+  routers:
+    application: ""
+    client: ""
+    web: ""
+
+database:
+  migrations: ""

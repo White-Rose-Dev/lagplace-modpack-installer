@@ -1,0 +1,282 @@
+{
+ "status": "success",
+ "name": "1.11.1",
+ "id": 12632,
+ "targets": [
+  {
+   "version": "40.2.14",
+   "id": 9459,
+   "name": "forge",
+   "type": "modloader",
+   "updated": 0
+  },
+  {
+   "version": "1.18.2",
+   "id": 637,
+   "name": "minecraft",
+   "type": "game",
+   "updated": 1650460275
+  },
+  {
+   "version": "17.0.2+8",
+   "id": 638,
+   "name": "java",
+   "type": "runtime",
+   "updated": 1650460275
+  }
+ ],
+ "files": [
+  {
+   "id": 367756,
+   "name": "rgp_client-1.0.3.jar",
+   "path": "./mods",
+   "type": "mod",
+   "url": "https://dist.modpacks.ch/unknownmods/unknown/6dd448e6dcf876e5df53296d6d3bafc21c5ba266",
+   "size": 7291242,
+   "sha1": "6dd448e6dcf876e5df53296d6d3bafc21c5ba266",
+   "clientonly": true,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 308586,
+   "name": "general.toml",
+   "path": "./config/Advancedperipherals",
+   "type": "config",
+   "url": "https://dist.modpacks.ch/modpacks/10/FTB%20Plexiglass%20Mountain-1.2.0/config/Advancedperipherals/dfdee83f2eb33c9c5c6f99aef986a6ca0a2f8d02",
+   "size": 388,
+   "sha1": "dfdee83f2eb33c9c5c6f99aef986a6ca0a2f8d02",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 298171,
+   "name": "metaphysics.toml",
+   "path": "./config/Advancedperipherals",
+   "type": "config",
+   "url": "https://dist.modpacks.ch/modpacks/0/FTB%20Ultimate:%20Anniversary%20Edition-1.3.0/config/Advancedperipherals/67983b16075d8208d8846b92050eb2b4baefd56f",
+   "size": 983,
+   "sha1": "67983b16075d8208d8846b92050eb2b4baefd56f",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 299784,
+   "name": "generator-storage.toml",
+   "path": "./config/Mekanism",
+   "type": "config",
+   "url": "https://dist.modpacks.ch/modpacks/0/FTB%20Presents%20Direwolf20%201.18-1.0.0-rc.1/config/Mekanism/a30466cb1b2fe31bf9f84273b7e0265a8be5e632",
+   "size": 389,
+   "sha1": "a30466cb1b2fe31bf9f84273b7e0265a8be5e632",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 297846,
+   "name": "generators-gear.toml",
+   "path": "./config/Mekanism",
+   "type": "config",
+   "url": "https://dist.modpacks.ch/modpacks/0/FTB%20University%201.16-1.4.0/config/Mekanism/6802831f4d5713d8e1a4e7ea43b5848d8fd64140",
+   "size": 767,
+   "sha1": "6802831f4d5713d8e1a4e7ea43b5848d8fd64140",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 299789,
+   "name": "generators.toml",
+   "path": "./config/Mekanism",
+   "type": "config",
+   "url": "https://dist.modpacks.ch/modpacks/10/FTB%20Presents%20Direwolf20%201.18-1.0.0-rc.1/config/Mekanism/a8bd8234a9563a90b72dab97d3298f81ba7b6217",
+   "size": 4633,
+   "sha1": "a8bd8234a9563a90b72dab97d3298f81ba7b6217",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 299568,
+   "name": "champions-entities.toml",
+   "path": "./defaultconfigs",
+   "type": "resource",
+   "url": "https://dist.modpacks.ch/modpacks/0/FTB%20Chocolate-1.0.0/defaultconfigs/f4ba723c50f20aadfbfff255a30ea5e9f54bc71f",
+   "size": 187,
+   "sha1": "f4ba723c50f20aadfbfff255a30ea5e9f54bc71f",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 299566,
+   "name": "champions-affixes.toml",
+   "path": "./defaultconfigs",
+   "type": "resource",
+   "url": "https://dist.modpacks.ch/modpacks/0/FTB%20Chocolate-1.0.0/defaultconfigs/bb5a28517bf05bbc65e78ed23e06e196fd575bb9",
+   "size": 1825,
+   "sha1": "bb5a28517bf05bbc65e78ed23e06e196fd575bb9",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 313689,
+   "name": "extendedexchange-server.toml",
+   "path": "./defaultconfigs",
+   "type": "resource",
+   "url": "https://dist.modpacks.ch/modpacks/0/FTB%20StoneBlock%203-1.5.0/defaultconfigs/5a489c5a6dd599c08c6fbf0c65735dca97143832",
+   "size": 953,
+   "sha1": "5a489c5a6dd599c08c6fbf0c65735dca97143832",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 310696,
+   "name": "champions-ranks.toml",
+   "path": "./defaultconfigs",
+   "type": "resource",
+   "url": "https://dist.modpacks.ch/modpacks/3/FTB%20StoneBlock%203-0.0.1/defaultconfigs/5eb8cc220aec5c7f6868d33ff227ddf0772eddcd",
+   "size": 783,
+   "sha1": "5eb8cc220aec5c7f6868d33ff227ddf0772eddcd",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 311537,
+   "name": "champions-server.toml",
+   "path": "./defaultconfigs",
+   "type": "resource",
+   "url": "https://dist.modpacks.ch/modpacks/6/FTB%20StoneBlock%203-1.0.0/defaultconfigs/3ca88a1152dec3176de648f71c437c92b40fe622",
+   "size": 6119,
+   "sha1": "3ca88a1152dec3176de648f71c437c92b40fe622",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 311858,
+   "name": "info_tabs.js",
+   "path": "./kubejs/client_scripts",
+   "type": "script",
+   "url": "https://dist.modpacks.ch/modpacks/1/FTB%20StoneBlock%203-1.3.0/kubejs/client_scripts/d00fbe75424be58dfa768ce7620e0ba01d57be7b",
+   "size": 2553,
+   "sha1": "d00fbe75424be58dfa768ce7620e0ba01d57be7b",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 310845,
+   "name": "ponder.js",
+   "path": "./kubejs/client_scripts",
+   "type": "script",
+   "url": "https://dist.modpacks.ch/modpacks/1/FTB%20StoneBlock%203-0.0.1/kubejs/client_scripts/21515c80ff732a6e7aa27b32258b1f093c46552c",
+   "size": 758,
+   "sha1": "21515c80ff732a6e7aa27b32258b1f093c46552c",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 340241,
+   "name": "show_and_hide.js",
+   "path": "./kubejs/client_scripts",
+   "type": "script",
+   "url": "https://dist.modpacks.ch/modpacks/0/FTB%20StoneBlock%203-1.9.0/kubejs/client_scripts/4c6c1b6b22e729596b6fd1be2f5125ac824bb053",
+   "size": 13066,
+   "sha1": "4c6c1b6b22e729596b6fd1be2f5125ac824bb053",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 311859,
+   "name": "tooltips.js",
+   "path": "./kubejs/client_scripts",
+   "type": "script",
+   "url": "https://dist.modpacks.ch/modpacks/10/FTB%20StoneBlock%203-1.3.0/kubejs/client_scripts/13f6e98712b41051c7f20a2cf17065363b0c2cab",
+   "size": 558,
+   "sha1": "13f6e98712b41051c7f20a2cf17065363b0c2cab",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 356710,
+   "name": "rei_groups.js",
+   "path": "./kubejs/client_scripts",
+   "type": "script",
+   "url": "https://dist.modpacks.ch/modpacks/2/FTB%20StoneBlock%203-1.10.0/kubejs/client_scripts/cabe8127c641ff0ecf9645dd557a7f877347c280",
+   "size": 23511,
+   "sha1": "cabe8127c641ff0ecf9645dd557a7f877347c280",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 327223,
+   "name": "AdvancedPeripherals-1.18.2-0.7.31r.jar",
+   "path": "./mods",
+   "type": "mod",
+   "url": "https://edge.forgecdn.net/files/4684/137/AdvancedPeripherals-1.18.2-0.7.31r.jar",
+   "size": 854834,
+   "sha1": "7a3abf64867b90007f5b7ca7f7c4530547599353",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 321206,
+   "name": "Applied-Botanics-1.0.3.jar",
+   "path": "./mods",
+   "type": "mod",
+   "url": "https://edge.forgecdn.net/files/4489/732/Applied-Botanics-1.0.3.jar",
+   "size": 201633,
+   "sha1": "9e021431d4309a2fc29b60f3c0ab7c9b9e1d17e2",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 308681,
+   "name": "Applied-Mekanistics-1.2.2.jar",
+   "path": "./mods",
+   "type": "mod",
+   "url": "https://edge.forgecdn.net/files/3968/835/Applied-Mekanistics-1.2.2.jar",
+   "size": 180651,
+   "sha1": "473e32ee3937706b8afbb9260b7a5fb55cc6f083",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 299606,
+   "name": "AutoRegLib-1.7-53.jar",
+   "path": "./mods",
+   "type": "mod",
+   "url": "https://edge.forgecdn.net/files/3642/382/AutoRegLib-1.7-53.jar",
+   "size": 42733,
+   "sha1": "3e8f5e0bbf90af2555394b2f9ff704142f979465",
+   "clientonly": false,
+   "serveronly": false,
+   "optional": false
+  },
+  {
+   "id": 367756,
+   "name": "rgp_client-1.0.3.jar",
+   "path": "./mods",
+   "type": "mod",
+   "url": "https://dist.modpacks.ch/unknownmods/unknown/6dd448e6dcf876e5df53296d6d3bafc21c5ba266",
+   "size": 7291242,
+   "sha1": "6dd448e6dcf876e5df53296d6d3bafc21c5ba266",
+   "clientonly": true,
+   "serveronly": false,
+   "optional": false
+  }
+ ]
+}

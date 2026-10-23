@@ -1,0 +1,198 @@
+{
+ "status": "success",
+ "id": 100,
+ "name": "FTB StoneBlock 3",
+ "synopsis": "In a world surrounded by stone, build yourself a subterranean kingdom that really rocks! Use magic and technology to forge your realm to your designs.",
+ "installs": 1121226,
+ "private": false,
+ "art": [
+  {
+   "id": 1193,
+   "type": "square",
+   "updated": 1723151800,
+   "url": "https://apps.modpacks.ch/modpacks/art/96/stoneblock_logo.png",
+   "mirrors": [],
+   "sha1": "a10750aa3582e04c3022580a05e11f4d023f7d69",
+   "size": 1843422,
+   "width": 1024,
+   "height": 1024,
+   "compressed": true
+  }
+ ],
+ "versions": [
+  {
+   "id": 6647,
+   "name": "1.8.0",
+   "type": "release",
+   "updated": 1691672431,
+   "targets": [
+    {
+     "version": "40.2.10",
+     "id": 4844,
+     "name": "forge",
+     "type": "modloader",
+     "updated": 1691672431
+    },
+    {
+     "version": "1.18.2",
+     "id": 637,
+     "name": "minecraft",
+     "type": "game",
+     "updated": 1650460275
+    },
+    {
+     "version": "17.0.2+8",
+     "id": 638,
+     "name": "java",
+     "type": "runtime",
+     "updated": 1650460275
+    }
+   ]
+  },
+  {
+   "id": 6967,
+   "name": "1.8.1",
+   "type": "release",
+   "updated": 1698747472,
+   "targets": [
+    {
+     "version": "40.2.9",
+     "id": 5059,
+     "name": "forge",
+     "type": "modloader",
+     "updated": 0
+    },
+    {
+     "version": "1.18.2",
+     "id": 637,
+     "name": "minecraft",
+     "type": "game",
+     "updated": 1650460275
+    },
+    {
+     "version": "17.0.2+8",
+     "id": 638,
+     "name": "java",
+     "type": "runtime",
+     "updated": 1650460275
+    }
+   ]
+  },
+  {
+   "id": 11655,
+   "name": "1.9.0",
+   "type": "release",
+   "updated": 1706997565,
+   "targets": [
+    {
+     "version": "40.2.14",
+     "id": 9459,
+     "name": "forge",
+     "type": "modloader",
+     "updated": 0
+    },
+    {
+     "version": "1.18.2",
+     "id": 637,
+     "name": "minecraft",
+     "type": "game",
+     "updated": 1650460275
+    },
+    {
+     "version": "17.0.2+8",
+     "id": 638,
+     "name": "java",
+     "type": "runtime",
+     "updated": 1650460275
+    }
+   ]
+  },
+  {
+   "id": 12145,
+   "name": "1.10.0",
+   "type": "release",
+   "updated": 1718983764,
+   "targets": [
+    {
+     "version": "40.2.14",
+     "id": 9459,
+     "name": "forge",
+     "type": "modloader",
+     "updated": 0
+    },
+    {
+     "version": "1.18.2",
+     "id": 637,
+     "name": "minecraft",
+     "type": "game",
+     "updated": 1650460275
+    },
+    {
+     "version": "17.0.2+8",
+     "id": 638,
+     "name": "java",
+     "type": "runtime",
+     "updated": 1650460275
+    }
+   ]
+  },
+  {
+   "id": 12492,
+   "name": "1.11.0",
+   "type": "release",
+   "updated": 1726692434,
+   "targets": [
+    {
+     "version": "40.2.14",
+     "id": 9459,
+     "name": "forge",
+     "type": "modloader",
+     "updated": 0
+    },
+    {
+     "version": "1.18.2",
+     "id": 637,
+     "name": "minecraft",
+     "type": "game",
+     "updated": 1650460275
+    },
+    {
+     "version": "17.0.2+8",
+     "id": 638,
+     "name": "java",
+     "type": "runtime",
+     "updated": 1650460275
+    }
+   ]
+  },
+  {
+   "id": 12632,
+   "name": "1.11.1",
+   "type": "release",
+   "updated": 1731616290,
+   "targets": [
+    {
+     "version": "40.2.14",
+     "id": 9459,
+     "name": "forge",
+     "type": "modloader",
+     "updated": 0
+    },
+    {
+     "version": "1.18.2",
+     "id": 637,
+     "name": "minecraft",
+     "type": "game",
+     "updated": 1650460275
+    },
+    {
+     "version": "17.0.2+8",
+     "id": 638,
+     "name": "java",
+     "type": "runtime",
+     "updated": 1650460275
+    }
+   ]
+  }
+ ]
+}
