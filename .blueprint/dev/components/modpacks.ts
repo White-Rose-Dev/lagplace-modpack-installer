@@ -56,8 +56,18 @@ export const isActive = (state: InstallState | null): boolean => !!state && !TER
 
 const base = (uuid: string) => `/api/client/servers/${uuid}/modpacks`;
 
-export const searchModpacks = (uuid: string, provider: string, q: string, page: number): Promise<ModpackSearch> =>
-    http.get(base(uuid), { params: { provider, q: q || undefined, page } }).then(({ data }) => data);
+export const searchModpacks = (uuid: string, provider: string, q: string, page: number, perPage: number): Promise<ModpackSearch> =>
+    http.get(base(uuid), { params: { provider, q: q || undefined, page, per_page: perPage } }).then(({ data }) => data);
+
+export interface InstalledModpack {
+    pack: string;
+    minecraft: string | null;
+    loader: string | null;
+    installed_at: string | null;
+}
+
+export const getInstalledModpack = (uuid: string): Promise<InstalledModpack | null> =>
+    http.get(`${base(uuid)}/installed`).then(({ data }) => data.installed ?? null);
 
 export const getModpackVersions = (uuid: string, provider: string, projectId: string): Promise<ModpackVersion[]> =>
     http.get(`${base(uuid)}/${encodeURIComponent(projectId)}/versions`, { params: { provider } }).then(({ data }) => data.versions);

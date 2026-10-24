@@ -23,6 +23,7 @@ export const grid = css`
 
 export const field = css`
     ${tw`rounded-lg px-3 py-2 bg-black bg-opacity-30 border border-neutral-600 text-neutral-100`};
+    height: 2.75rem;
     &:focus {
         outline: none;
         border-color: rgba(0, 202, 150, 0.6);

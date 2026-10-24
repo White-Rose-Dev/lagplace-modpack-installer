@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Pterodactyl\Http\Controllers\Controller;
 use Pterodactyl\Jobs\Lagplace\ModpackInstallJob;
 use Pterodactyl\Models\Server;
+use Pterodactyl\Repositories\Wings\DaemonFileRepository;
+use Pterodactyl\Services\Lagplace\Modpacks\DaemonServerFiles;
+use Pterodactyl\Services\Lagplace\Modpacks\InstalledModpack;
 use Pterodactyl\Services\Lagplace\Modpacks\ModpackException;
 use Pterodactyl\Services\Lagplace\Modpacks\ModpackFeature;
 use Pterodactyl\Services\Lagplace\Modpacks\ModpackInstaller;
@@ -38,17 +41,33 @@ class ModpacksController extends Controller
             'q' => ['nullable', 'string', 'max:100'],
             'page' => ['nullable', 'integer', 'min:1', 'max:200'],
             'provider' => ['nullable', 'string', 'max:20'],
+            'per_page' => ['nullable', 'integer', 'in:10,20,50'],
         ]);
 
         return $this->guard(function () use ($data) {
             $provider = ModpackProviders::require($data['provider'] ?? null);
             $page = (int) ($data['page'] ?? 1);
+            $perPage = (int) ($data['per_page'] ?? self::PER_PAGE);
 
             return new JsonResponse(
-                ['provider' => $provider, 'providers' => ModpackProviders::all(), 'page' => $page, 'per_page' => self::PER_PAGE]
-                + $this->sources->get($provider)->search($data['q'] ?? null, $page, self::PER_PAGE)
+                ['provider' => $provider, 'providers' => ModpackProviders::all(), 'page' => $page, 'per_page' => $perPage]
+                + $this->sources->get($provider)->search($data['q'] ?? null, $page, $perPage)
             );
         });
+    }
+
+    /** O último modpack instalado neste servidor, lido do manifesto no disco (sobrevive à cache e aos reinícios). */
+    public function installed(Request $request, Server $server, DaemonFileRepository $repo): JsonResponse
+    {
+        $this->ensureEnabled($request);
+
+        try {
+            $json = DaemonServerFiles::connect($repo, $server)->read(InstalledModpack::PATH, InstalledModpack::MAX_BYTES);
+        } catch (\Throwable) {
+            return new JsonResponse(['installed' => null]);
+        }
+
+        return new JsonResponse(['installed' => InstalledModpack::parse($json)]);
     }
 
     public function versions(Request $request, Server $server, string $project): JsonResponse
