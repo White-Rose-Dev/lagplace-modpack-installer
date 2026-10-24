@@ -56,8 +56,8 @@ export const isActive = (state: InstallState | null): boolean => !!state && !TER
 
 const base = (uuid: string) => `/api/client/servers/${uuid}/modpacks`;
 
-export const searchModpacks = (uuid: string, provider: string, q: string, page: number, perPage: number): Promise<ModpackSearch> =>
-    http.get(base(uuid), { params: { provider, q: q || undefined, page, per_page: perPage } }).then(({ data }) => data);
+export const searchModpacks = (uuid: string, provider: string, q: string, page: number): Promise<ModpackSearch> =>
+    http.get(base(uuid), { params: { provider, q: q || undefined, page } }).then(({ data }) => data);
 
 export interface InstalledModpack {
     pack: string;

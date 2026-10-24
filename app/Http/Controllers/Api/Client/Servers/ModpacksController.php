@@ -41,17 +41,15 @@ class ModpacksController extends Controller
             'q' => ['nullable', 'string', 'max:100'],
             'page' => ['nullable', 'integer', 'min:1', 'max:200'],
             'provider' => ['nullable', 'string', 'max:20'],
-            'per_page' => ['nullable', 'integer', 'in:10,20,50'],
         ]);
 
         return $this->guard(function () use ($data) {
             $provider = ModpackProviders::require($data['provider'] ?? null);
             $page = (int) ($data['page'] ?? 1);
-            $perPage = (int) ($data['per_page'] ?? self::PER_PAGE);
 
             return new JsonResponse(
-                ['provider' => $provider, 'providers' => ModpackProviders::all(), 'page' => $page, 'per_page' => $perPage]
-                + $this->sources->get($provider)->search($data['q'] ?? null, $page, $perPage)
+                ['provider' => $provider, 'providers' => ModpackProviders::all(), 'page' => $page, 'per_page' => self::PER_PAGE]
+                + $this->sources->get($provider)->search($data['q'] ?? null, $page, self::PER_PAGE)
             );
         });
     }

@@ -42,7 +42,6 @@ const Content = ({ uuid }: { uuid: string }) => {
     const [typed, setTyped] = useState('');
     const [query, setQuery] = useState('');
     const [page, setPage] = useState(1);
-    const [perPage, setPerPage] = useState(20);
     const [recent, setRecent] = useState<InstalledModpack | null>(null);
     const [provider, setProvider] = useState('modrinth');
     const [results, setResults] = useState<ModpackSearch | null>(null);
@@ -59,7 +58,7 @@ const Content = ({ uuid }: { uuid: string }) => {
         let alive = true;
         setLoading(true);
         setError('');
-        searchModpacks(uuid, provider, query, page, perPage)
+        searchModpacks(uuid, provider, query, page)
             .then((r) => alive && setResults(r))
             .catch((e) => alive && setError(errorMessage(e)))
             .then(() => alive && setLoading(false));
@@ -67,7 +66,7 @@ const Content = ({ uuid }: { uuid: string }) => {
         return () => {
             alive = false;
         };
-    }, [uuid, provider, query, page, perPage]);
+    }, [uuid, provider, query, page]);
 
     const justFinished = install?.stage === 'done';
     useEffect(() => {
@@ -203,21 +202,6 @@ const Content = ({ uuid }: { uuid: string }) => {
                                 {p.enabled ? p.name : `${p.name} (coming soon)`}
                             </option>
                         ))}
-                    </select>
-                </Filter>
-                <Filter label={'Page size'} htmlFor={'modpack_page_size'}>
-                    <select
-                        id={'modpack_page_size'}
-                        value={perPage}
-                        onChange={(e) => {
-                            setPage(1);
-                            setPerPage(Number(e.target.value));
-                        }}
-                        css={field}
-                    >
-                        <option value={10}>10</option>
-                        <option value={20}>20</option>
-                        <option value={50}>50</option>
                     </select>
                 </Filter>
                 <div css={tw`w-full md:w-auto md:flex-1`}>
