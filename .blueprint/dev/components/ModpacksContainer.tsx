@@ -152,11 +152,6 @@ const Content = ({ uuid }: { uuid: string }) => {
                 </div>
             )}
 
-            <div css={[strip, tw`p-4 mb-4 text-sm text-neutral-200`]}>
-                Install a complete modpack server in one click. Everything on this server is replaced after a backup is taken
-                automatically.
-            </div>
-
             {showBanner && install && (
                 <div css={[strip, tw`p-3 mb-4 flex items-center justify-between gap-3`]}>
                     <p css={tw`text-sm text-neutral-100`}>
